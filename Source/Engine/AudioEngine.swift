@@ -146,7 +146,7 @@ class AudioEngine: AudioEngineProtocol {
 
         let finalNode = audioModifiers[audioModifiers.count - 1]
 
-        engine.connect(finalNode, to: engine.mainMixerNode, format: engineAudioFormat)
+        engine.connect(finalNode, to: engine.outputNode, format: engineAudioFormat)
     }
     
     deinit {
